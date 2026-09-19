@@ -1,0 +1,389 @@
+/* ********** STRT GLOBAL *********** */
+
+:root {
+  --main-color: #3682f4;
+  --padding: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* ********** END GLOBAL *********** */
+/* ************STRT HEADER *********** */
+header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(32, 35, 53, 0.7),
+      rgba(16, 19, 36, 0.7)
+    ),
+    url(../img/banner.png);
+  background-position: center;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 25px;
+}
+nav .img {
+  flex: 1;
+}
+nav .img img {
+  width: 150px;
+}
+nav .links {
+  text-align: right;
+
+  transition: 0.5s;
+}
+
+nav .links ul li {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+
+  text-align: center;
+}
+nav .links ul li a {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+  position: relative;
+}
+
+nav .links ul li a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-color);
+  height: 3px;
+  transition: 0.5s;
+}
+nav .links ul li a:hover {
+  background-color: white;
+  color: black;
+}
+nav .links ul li a:hover::after {
+  width: 100%;
+}
+header .text {
+  position: absolute;
+  width: 70%;
+  box-shadow: 0 0 15px 0 black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 15px 25px;
+}
+
+header .text h1 {
+  margin: 16px 0;
+
+  font-size: 62px;
+  font-weight: 500;
+}
+header .text p {
+  font-weight: 300;
+  margin: 16px;
+}
+
+header .text a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 25px;
+  border: 1px solid white;
+  display: inline-block;
+  margin: 16px 0;
+  transition-duration: 0.5s;
+}
+header .text a:hover {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.spans {
+  display: flex;
+  flex-flow: column;
+  width: 25px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  z-index: 10;
+  cursor: pointer;
+  visibility: hidden;
+}
+nav span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  margin-top: 5px;
+}
+@media (max-width: 992px) {
+  nav .links ul li {
+    display: block;
+  }
+  nav .links {
+    position: absolute;
+    width: 200px;
+
+    top: 14px;
+    right: 54px;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 3;
+    background-color: var(--main-color);
+  }
+  .links ul li a {
+    display: block;
+  }
+  .spans {
+    visibility: visible;
+  }
+  header .text h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 768px) {
+  header .text h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+/* ************END HEADER *********** */
+
+/* ************strt course *********** */
+
+.course {
+  padding-top: var(--padding);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.course h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+.course p {
+  font-weight: 300;
+}
+.boxs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 35px;
+  padding: 15px 0;
+}
+.course .boxs .box {
+  flex-basis: calc((100% - 45px) / 3);
+  background-color: rgba(218, 216, 216, 0.61);
+  padding: 25px 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  transition: 0.5s;
+}
+.course .boxs .box:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.493);
+}
+.course .boxs .box h3 {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 992px) {
+  .course .boxs {
+    flex-flow: column;
+  }
+}
+
+/* ************end course *********** */
+
+/* ******** strt campus ************/
+.campus {
+  width: 80%;
+  text-align: Center;
+  padding-top: var(--padding);
+  margin: 0 auto;
+}
+.campus h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+}
+.campus p {
+  font-weight: 300;
+}
+.campus .boxs .box {
+  flex-basis: calc((100% - 45px) / 3);
+  margin-left: 15px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.campus .boxs .box img {
+  width: 100%;
+  display: block;
+}
+.campus .boxs .box .overlayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.campus .boxs .box .overlayer:hover {
+  background-color: rgba(229, 0, 0, 0.7);
+}
+.campus .boxs .box .overlayer p {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transition: 0.5s;
+  transform: translatex(-50%);
+  opacity: 0;
+}
+.campus .boxs .box .overlayer:hover p {
+  bottom: 49%;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .boxs {
+    flex-flow: column;
+  }
+}
+/* ******** end campus ***********/
+/* ******** strt Facilities */
+.Facilities {
+  text-align: center;
+  padding-top: var(--padding);
+  width: 80%;
+  margin: 0 auto;
+}
+.Facilities > p {
+  font-weight: 300;
+}
+.Facilities .boxs .box {
+  flex-basis: calc((100% - 45px) / 3);
+  margin-left: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding: 16px;
+}
+.Facilities .boxs .box img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.Facilities .boxs .box h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 16px 0;
+}
+/* ******** end Facilities */
+/* strt student */
+.student {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.student > p {
+  font-weight: 300;
+}
+.student .boxs .box {
+  flex-basis: calc((100% - 30px) / 2);
+  margin-bottom: 15px;
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  background-color: rgba(238, 238, 238, 0.699);
+}
+.student .boxs .box img {
+  height: 60px;
+  margin-right: 18px;
+  border-radius: 50%;
+}
+.student .boxs .box h3 {
+  margin: 16px 0;
+}
+.student .boxs .box p {
+  font-weight: 300;
+}
+
+/* end student */
+/* strt varios */
+.varios {
+  width: 80%;
+  margin: 50px auto 0;
+  text-align: center;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url("../img/banner2.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.varios .content h1 {
+  color: white;
+}
+.varios .content a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 30px;
+  border: 2px solid white;
+  color: white;
+}
+
+/* end varios */
+.about {
+  width: 80%;
+  text-align: center;
+  margin: 100px auto;
+}
+.about h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.about p {
+  margin: 16px 0;
+  font-weight: 200;
+}
+.about i {
+  padding: 20px;
+  color: var(--main-color);
+  font-size: 18px;
+  cursor: pointer;
+}
